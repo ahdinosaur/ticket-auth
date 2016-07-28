@@ -88,7 +88,7 @@ module.exports = function (db) {
           value: {
             resource: opts.resource, uses: opts.uses,
             created: opts.created, expires: opts.expires,
-            stubs: stub.concat(opts.stubs)
+            stubs: opts.stubs.concat([stub])
           }, type: 'put'
         },
         {key: ['stub', stub], value: opts.resource, type: 'put'}
